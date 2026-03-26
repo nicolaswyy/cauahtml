@@ -1,56 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário Beatriz ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(#ff9eb5, #ff4d6d);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
 
-<meta charset="UTF-8">
-<title>Feliz Aniversário Beatriz ❤️</title>
+        h1 {
+            font-size: clamp(1.8rem, 6vw, 3rem);
+            margin-top: 40px;
+            margin-bottom: 10px;
+            padding: 0 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
 
-<style>
+        .mensagem {
+            font-size: clamp(1rem, 4vw, 1.3rem);
+            max-width: 500px;
+            margin: 0 auto 50px auto;
+            padding: 0 20px;
+            line-height: 1.5;
+            font-weight: 300;
+            font-style: italic;
+        }
 
-body{
-margin: 53px;;
-padding: 143px;
-background:linear-gradient(#ff9eb5,#ff4d6d);
-font-family:Arial;
-text-align:center;
-color:white;
-overflow:hidden;
-}
+        /* Container ajustado para ocupar toda a largura e empurrar as fotos para as pontas */
+        .container-foto {
+            display: flex;
+            justify-content: space-between; /* Uma na ponta esquerda, outra na direita */
+            align-items: center;
+            width: 100%; 
+            max-width: 1200px; /* Limite para não sumirem em monitores ultra-wide */
+            padding: 0 50px; /* Distância das bordas da tela */
+            box-sizing: border-box;
+            margin-bottom: 40px;
+        }
 
-h1{
-font-size:60px;
-margin-top:80px;
-}
+        .foto-item {
+            max-width: 250px; /* Diminuí um pouco mais para dar mais destaque ao "vazio" central */
+            flex-shrink: 0;
+        }
 
-button:hover{
-transform:scale(1.1);
-}
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+            border: 4px solid white;
+            transition: transform 0.3s ease;
+        }
 
-.heart{
-position:fixed;
-top:-10px;
-font-size:25px;
-animation:cair 6s linear infinite;
-}
+        /* Responsividade para celulares: as fotos voltam a ficar centralizadas se a tela for pequena */
+        @media (max-width: 600px) {
+            .container-foto {
+                justify-content: center;
+                padding: 0 20px;
+            }
+            .foto-item {
+                max-width: 80%;
+            }
+        }
 
-@keyframes cair{
-0%{transform:translateY(-10vh);}
-100%{transform:translateY(110vh);}
-}
+        /* Corações */
+        .heart {
+            position: fixed;
+            top: -10vh;
+            font-size: 25px;
+            z-index: -1;
+            animation: cair 6s linear infinite;
+        }
 
-</style>
-
+        @keyframes cair {
+            0% { transform: translateY(-10vh) rotate(0deg); }
+            100% { transform: translateY(110vh) rotate(360deg); }
+        }
+    </style>
 </head>
-
 <body>
 
-<h1>❤️ Feliz Aniversário Beatriz ❤️</h1>
+    <h1>❤️ Feliz Aniversário Beatriz ❤️</h1>
+    
+    <p class="mensagem">
+        Feliz aniversário amor, eu te amo muito! Que Deus te abençoe sempre, que você conquiste tudo que deseja, e sempre vou estar aqui para você.
+    </p>
 
-<div class="heart" style="left:10%">❤️</div>
-<div class="heart" style="left:30%; animation-delay:2s">❤️</div>
-<div class="heart" style="left:50%; animation-delay:4s">❤️</div>
-<div class="heart" style="left:70%; animation-delay:1s">❤️</div>
-<div class="heart" style="left:90%; animation-delay:3s">❤️</div>
+    <div class="container-foto">
+        <div class="foto-item">
+            <img src="Screenshot_20241003_183240_Photos.jpg" alt="Foto da Beatriz 1">
+        </div>
+
+        <div class="foto-item">
+            <img src="IMG-20260209-WA0002(1).jpg" alt="Foto da Beatriz 2">
+        </div>
+        <div class="foto-item">
+            <img src="IMG-20250514-WA0167.jpg" alt="foto da Beatriz 3">
+        </div>
+        <div class="foto-item">
+            <img src="IMG-20250330-WA0118.jpg" alt="foto da Beatriz 4">
+        </div>
+
+    <div class="heart" style="left:10%; animation-duration: 5s;">❤️</div>
+    <div class="heart" style="left:30%; animation-delay:2s; animation-duration: 7s;">❤️</div>
+    <div class="heart" style="left:50%; animation-delay:4s; animation-duration: 6s;">❤️</div>
+    <div class="heart" style="left:70%; animation-delay:1s; animation-duration: 8s;">❤️</div>
+    <div class="heart" style="left:90%; animation-delay:3s; animation-duration: 5s;">❤️</div>
 
 </body>
 </html>
